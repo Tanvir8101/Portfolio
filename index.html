@@ -37,7 +37,6 @@
             left: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
         }
 
         nav ul {
@@ -101,17 +100,30 @@
             color: #333;
         }
 
+        /* Profile Container */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Space between the name and description */
+        }
+
         /* Profile Picture */
         .profile-pic {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
             border-radius: 50%;
             width: 150px;
             height: 150px;
             border: 5px solid #fff;
-            animation: fadeIn 2s ease;
+            object-fit: cover; /* Ensures the image fits inside the circle */
+        }
+
+        /* Name Styling */
+        .profile-container h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-top: 10px;
+            color: #fff;
         }
 
         /* About Me Section */
@@ -233,8 +245,10 @@
 
     <!-- Header Section with Profile Picture -->
     <header>
-        <img src="profile.jpg" alt="Tanvir Hasan" class="profile-pic">
-        <h1>Tanvir Hasan</h1>
+        <div class="profile-container">
+            <img src="images/ead5a281-0174-4f75-8128-f6304d3d1187.png" alt="Tanvir Hasan" class="profile-pic">
+            <h1>Tanvir Hasan</h1>
+        </div>
         <p>Co-Founder & CTO | Team Lead | Senior IT Executive</p>
         <a href="mailto:tanvirhasan8101@gmail.com">Contact Me</a>
     </header>
